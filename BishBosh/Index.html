@@ -14,22 +14,29 @@
         ett max antal. Varje gång ett tal är jämnt delbart med värdet av Bish
         ersätts talet med ordet Bish. Motsvarande gäller för Bosh. Om både Bish
         och Bosh är jämnt delbart med talet i serien blir det Bish-Bosh.
+        <br />  
+        Ange det minsta talet i Bish, och det större i Bosh. Ange en limit som är
+        större än Bosh.
     </h6>
     <div class="container">
         <p class="bg-success text-black col-4">Fyll i Bish, Bosh och antal.</p>
-        <form action="#" method="post" onsubmit="return ReadForm()">
+        <!--<form action="#" method="post" onsubmit="return ReadForm()">-->
             <label class="col-4 bg-primary text-warning">Bish</label>
-            <input class="col-4" type="number" id="bish" name="bish" placeholder="1-20" min="1" max="20" step="1" required /><br />
+            <input class="col-4" type="number" id="bish" name="bish" placeholder="1-20" /><br />
             <label class="col-4 bg-primary text-warning">Bosh</label>
-            <input class="col-4" type="number" id="bosh" name="bosh" placeholder="2-20" min="2" max="30" step="1" required /><br />
+            <input class="col-4" type="number" id="bosh" name="bosh" placeholder="2-30" /><br />
             <label class="col-4 bg-primary text-warning">Limit</label>
-            <input class="col-4" type="number" id="limit" name="limit" placeholder="10-999" min="10" max="999" step="1" required /><br />
-            <input class="col-4 btn bg-primary" type="reset">
-            <input class="col-4 btn bg-success" type="submit" value="Visa lista">
-        </form>
+            <input class="col-4" type="number" id="limit" name="limit" placeholder="3-999" /><br />
+            <button class="col-4 btn bg-primary" id="resetinput">Rensa</button>
+            <button class="col-4 btn bg-success" id="clickme">Visa lista</button>
+            <!--<input class="col-4 btn bg-success" type="submit" value="Visa lista">-->
+        <!--</form>-->
     </div>
-    <hr class="bg-primary"/>
+
+    <hr class="bg-primary" />
+
     <p id="output" class="col-12 bg-dark text-warning">Resultatet skrivs här.</p>
+
     <footer class="text-center bg-info text-white">
         &copy; 2020, Jörgen Forsberg
     </footer>

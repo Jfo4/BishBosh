@@ -2,30 +2,36 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title></title>
-    <script>
-        for (let i = 1; i <= 100; i++) {
-            let out = "";
-            if (i % 3 == 0 && i % 4 == 0) {
-                out = "Bish-Bosh";
-            }
-            else if (i % 3 == 0) {
-                out = "Bish";
-            }
-            else if (i % 4 == 0) {
-                out = "Bosh";
-            }
-            else if (out == "") {
-                out = i; // .toString();
-            }
-            else {
-                out = "Not possible?"
-            }
-            console.log(('  ' + i).substr(-3) + ': ' + out);
-        }
-    </script>
-</head>
+    <title>Bish-Bosh 2.0</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="css/layout.css" rel="stylesheet" />
+    <script src="script/BishBosh.js"></script>
+ </head>
 <body>
-
+    <h1 class="display-2 text-center bg-primary text-warning">Bish Bosh 2.0</h1>
+    <h6 class="bg-warning text-success col-10 m-4">
+        BishBosh är en enkel lek där två personer växelvis räknar från 1 till
+        ett max antal. Varje gång ett tal är jämnt delbart med värdet av Bish
+        ersätts talet med ordet Bish. Motsvarande gäller för Bosh. Om både Bish
+        och Bosh är jämnt delbart med talet i serien blir det Bish-Bosh.
+    </h6>
+    <div class="container">
+        <p class="bg-success text-black col-4">Fyll i Bish, Bosh och antal.</p>
+        <form action="#" method="post" onsubmit="return ReadForm()">
+            <label class="col-4 bg-primary text-warning">Bish</label>
+            <input class="col-4" type="number" id="bish" name="bish" placeholder="1-20" min="1" max="20" step="1" required /><br />
+            <label class="col-4 bg-primary text-warning">Bosh</label>
+            <input class="col-4" type="number" id="bosh" name="bosh" placeholder="2-20" min="2" max="30" step="1" required /><br />
+            <label class="col-4 bg-primary text-warning">Limit</label>
+            <input class="col-4" type="number" id="limit" name="limit" placeholder="10-999" min="10" max="999" step="1" required /><br />
+            <input class="col-4 btn bg-primary" type="reset">
+            <input class="col-4 btn bg-success" type="submit" value="Visa lista">
+        </form>
+    </div>
+    <hr class="bg-primary"/>
+    <p id="output" class="col-12 bg-dark text-warning">Resultatet skrivs här.</p>
+    <footer class="text-center bg-info text-white">
+        &copy; 2020, Jörgen Forsberg
+    </footer>
 </body>
 </html>

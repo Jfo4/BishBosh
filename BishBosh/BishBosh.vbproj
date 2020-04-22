@@ -92,7 +92,12 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\layout.css" />
+    <Content Include="images\JavaScript.jpg" />
     <Content Include="Index.html" />
+    <Content Include="My Project\script.js" />
+    <Content Include="My Project\test.html" />
+    <Content Include="script\BishBosh.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
